@@ -121,7 +121,8 @@ public class GCMIntentService extends GCMBaseIntentService {
                 .setContentTitle(extras.getString("title"))
                 .setTicker(extras.getString("title"))
                 .setContentIntent(contentIntent)
-                .setAutoCancel(true);
+                .setAutoCancel(true)
+                 .setLights(Color.RED, 500, 500);
 
         SharedPreferences prefs = context.getSharedPreferences(PushPlugin.COM_ADOBE_PHONEGAP_PUSH, Context.MODE_PRIVATE);
         String localIcon = prefs.getString("icon", null);
